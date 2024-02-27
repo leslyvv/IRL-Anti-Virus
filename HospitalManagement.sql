@@ -64,7 +64,7 @@ INSERT INTO symptom (symptom_id, symptom_name) VALUES
 (2,'Diarrhea'),
 (3,'Fatigue'),
 (4,'Muscle aches'),
-(5,'Asthma'),
+(5,'Wheezing'),
 (6,'Depression'),
 (7,'Headache'),
 (8,'Cough'),
