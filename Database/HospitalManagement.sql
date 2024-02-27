@@ -362,26 +362,68 @@ INSERT INTO doctor_availability(availability_id, doctor_id, day_of_week, start_t
 (39, 107, 'Thursday', '09:00:00', '17:00:00'),
 (40, 107, 'Friday', '09:00:00', '17:00:00');
 
+CREATE TABLE room(
+    hospital_id INT,
+    room_number INT NOT NULL,
+    PRIMARY KEY (room_number),
+    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
+);
+INSERT INTO room(hospital_id, room_number) VALUES
+(1000, 100),
+(1000, 101),
+(1000, 102),
+(1000, 103),
+(1000, 104),
+(1000, 200),
+(1000, 201),
+(1000, 202),
+(1000, 203),
+(1000, 204),
+
+(1001, 111),
+(1001, 112),
+(1001, 113),
+(1001, 114),
+(1001, 115),
+(1001, 222),
+(1001, 223),
+(1001, 224),
+(1001, 225),
+(1001, 226),
+
+(1002, 141),
+(1002, 151),
+(1002, 161),
+(1002, 171),
+(1002, 181),
+(1002, 209),
+(1002, 210),
+(1002, 212),
+(1002, 214),
+(1002, 216);
+   
 CREATE TABLE appointment(
 	appointment_id INT AUTO_INCREMENT,
     patient_id INT NOT NULL,
     doctor_id INT NOT NULL,
     hospital_id INT,
+    room_number INT,
     start_time TIME,
     end_time TIME,
     appointment_fee DECIMAL(10,2),
     PRIMARY KEY (appointment_id),
     FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
     FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id),
-    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
+    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id),
+    FOREIGN KEY (room_number) REFERENCES room(room_number)
 );
-INSERT INTO appointment(appointment_id, patient_id, doctor_id, hospital_id, start_time, end_time, appointment_fee) VALUES
-(1, 1, 100, 1000, '09:30:00', '10:00:00', 50.00),
-(2, 2,100, 1000, '11:00:00', '11:45:00', 50.00),
-(3, 3,100, 1000, '12:00:00', '12:30:00', 50.00),
-(4, 4, 104, 1002, '12:30:00', '13:00:00', 50.00),
-(5, 5, 105, 1002, '12:30:00', '13:00:00', 50.00),
-(6, 6, 101, 1001, '10:15:00', '10:45:00', 50.00);  
+INSERT INTO appointment(appointment_id, patient_id, doctor_id, hospital_id, room_number, start_time, end_time, appointment_fee) VALUES
+(1, 1, 100, 1000, 101, '09:30:00', '10:00:00', 50.00),
+(2, 2,100, 1000, 104, '11:00:00', '11:45:00', 50.00),
+(3, 3,100, 1000, 203, '12:00:00', '12:30:00', 50.00),
+(4, 4, 104, 1002, 214, '12:30:00', '13:00:00', 50.00),
+(5, 5, 105, 1002, 171, '12:30:00', '13:00:00', 50.00),
+(6, 6, 101, 1001, 222, '10:15:00', '10:45:00', 50.00);  
 
 CREATE TABLE doctor_disease (
     doctor_id INT NOT NULL,
