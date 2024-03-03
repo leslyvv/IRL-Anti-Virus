@@ -365,7 +365,7 @@ INSERT INTO doctor_availability(availability_id, doctor_id, day_of_week, start_t
 CREATE TABLE room(
     hospital_id INT,
     room_number INT NOT NULL,
-    PRIMARY KEY (room_number),
+    PRIMARY KEY (room_number, hospital_id),
     FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
 );
 INSERT INTO room(hospital_id, room_number) VALUES
