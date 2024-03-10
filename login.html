@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body> 
+    <form>     
+        <div class = "login-header">
+          Login
+        </div>          
+          <div class="form-container">
+              <p class ="username-section">
+                <input class="user-box" type="text" placeholder="Enter Username" pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$" required>
+                <img class="user-pic" src="pictures/user_icon.png">
+              </p>
+              <p class= "password-section">
+                <input class ="password-box" type="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}" required>
+                <img class="key-pic" src="pictures/key_pwd.png">
+              </p>
+          </div>
+          <div class ="form-subcontainer">
+            <p class= "forgot-password">
+              <a href ="#">Forgot password?</a>
+            </p>
+          </div>
+          <div class ="submission">
+            <button class="login-button">Login</button>
+            <p class="register">
+              Not a registered user? 
+              <a href="create_an_account.html">Register here!</a>
+            </p>
+          </div>
+      </form>
+  </body>
+</html>
