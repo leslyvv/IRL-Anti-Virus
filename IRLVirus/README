@@ -1,0 +1,10 @@
+how to run django
+steps (in terminal) to run django
+1. cd into django x
+2a: turn on virtual enviornment 
+$python -m venv .venv
+2b: $.venv\Scripts\Activate.ps1
+3 (install requirements if not already installed)
+3a: pip install -r requirements.txt
+4. run server
+$ python manage.py runserver
