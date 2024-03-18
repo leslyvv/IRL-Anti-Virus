@@ -117,20 +117,28 @@ CREATE TABLE doctor_availability(
     FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id)
 );
 
+CREATE TABLE room(
+    hospital_id INT,
+    room_number INT NOT NULL,
+    PRIMARY KEY (room_number, hospital_id),
+    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
+);
+
 CREATE TABLE appointment(
 	appointment_id INT AUTO_INCREMENT,
     patient_id INT NOT NULL,
     doctor_id INT NOT NULL,
     hospital_id INT,
+    room_number INT,
     start_time TIME,
     end_time TIME,
     appointment_fee DECIMAL(10,2),
     PRIMARY KEY (appointment_id),
     FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
     FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id),
-    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
+    FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id),
+    FOREIGN KEY (room_number) REFERENCES room(room_number)
 );
-
 
 CREATE TABLE doctor_disease (
     doctor_id INT NOT NULL,
