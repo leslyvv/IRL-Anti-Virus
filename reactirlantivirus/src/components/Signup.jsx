@@ -48,7 +48,7 @@ const Signup = () => {
           </div>
           <div>
             <label htmlFor="username">Username:</label><br />
-            <input className="user-box" type="text" name="username" value={formData.username} onChange={handleChange} pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$" required />
+            <input className="users-box" type="text" name="username" value={formData.username} onChange={handleChange} pattern="^[a-zA-Z0-9](_(?!(\.|_))|\.(?!(_|\.))|[a-zA-Z0-9]){6,18}[a-zA-Z0-9]$" required />
           </div>
           <div>
             <label htmlFor="pass">Password:</label><br />
