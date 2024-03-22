@@ -20,15 +20,30 @@ body{
     background-color: rgb(192, 235, 255);
     padding-left: 0;
     width: 580px;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 2px;
     font-size: 15px;
     border-style: solid;
     border-top: none;
     border-left: none;
     border-right: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-end-start-radius: 0px;
+    border-bottom-right-radius: 0px;
     border-bottom-color:black;
     margin-bottom:0;
+    }
+    .user-box, .password-box:active{
+      border-style: solid;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-end-start-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-bottom-color:black;
     }
   
   .user-pic, .key-pic{
@@ -48,7 +63,7 @@ body{
   .form-subcontainer{
     display:flex;
     flex: 1;
-    margin-left: 448px;
+    margin-left: 432px;
     
   }   
   .forgot-password{
@@ -72,6 +87,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-right: 65px;
   }
   .login-button{
     background-color:rgb(227,227,227);
