@@ -27,13 +27,15 @@ body{
     margin-left: 15px;
   
   }
+
+  input::placeholder{
+    font-size:15px;
+  }
   input::placeholder, input::date{
-    
     color:gray;
     opacity: 0.5;
   }
   .account-info{
-    margin-left: 18%;
     margin-top: 2%;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -45,14 +47,14 @@ body{
     width: 380px;
     text-align: left;
     font-size: 10px;
-    margin-left: 10px;
+    margin-left: 160px;
   }
   
   .submission{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left:80px;
+    margin-left:90px;
   }
   .create-acct-button{
     background-color:white;
