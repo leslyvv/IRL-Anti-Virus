@@ -1,4 +1,3 @@
-// CreateAccountForm.js
 import React, { useState } from 'react';
 import './Signup.css'; // Make sure to adjust the path as necessary
 
@@ -30,7 +29,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="account-container">
+    <div className="account-container2">
       <div className="account-header">Create an Account</div>
       <form onSubmit={handleSubmit}>
         <div className="account-info">
