@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Signup.css'; // Make sure to adjust the path as necessary
 import {Link} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 const Signup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -26,6 +28,7 @@ const Signup = () => {
     e.preventDefault();
     // Add form submission logic here
     console.log(formData);
+    navigate('/login');
   };
 
   return (
