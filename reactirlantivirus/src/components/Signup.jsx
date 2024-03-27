@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Signup.css'; // Make sure to adjust the path as necessary
-
+import {Link} from "react-router-dom";
 const Signup = () => {
   const [formData, setFormData] = useState({
     firstname: '',
@@ -86,7 +86,7 @@ const Signup = () => {
         <div className="submission">
           <button className="create-acct-button">Create Account</button>
           <p className="cancel-link">
-            <a href="#">Cancel</a>
+            <Link className= "shadowing" to="/">Cancel</Link>
           </p>
         </div>
       </form>
