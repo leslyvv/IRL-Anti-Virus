@@ -1,6 +1,11 @@
-body{
-    background-color: rgb(192, 235, 255);
-  }
+    .account-container{
+      background-color:rgb(192, 235, 255);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column; /* Adjust as needed */
+      justify-content: center; /* Centers content vertically */
+      align-items: center; /* Centers content horizontally */
+    }
   .login-header{
     margin-top: 15%;
     font-weight: 600;
@@ -62,9 +67,7 @@ body{
   
   .form-subcontainer{
     display:flex;
-    flex: 1;
-    margin-left: 432px;
-    
+    flex: 1;  
   }   
   .forgot-password{
     margin-top: 0;
