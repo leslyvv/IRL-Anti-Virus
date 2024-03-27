@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import {Link} from "react-router-dom";
 import './Forgot_password.css'; 
 const Forgot_Password = () => {
 
@@ -22,7 +23,7 @@ const Forgot_Password = () => {
         </div>
         <button className="reset-button">Reset Password</button>
         <p className="cancel-link">
-            <a href="#">Cancel</a>
+            <Link className= "shadowing" to="/login">Cancel</Link>
         </p>
       </div>
     </form>
