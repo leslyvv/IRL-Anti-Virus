@@ -108,7 +108,7 @@ const Home = () => {
         <div className="vertical-line"></div>
         <div className="links-info">
           <span className="bold-title">Helpful Links</span><br></br>
-          <a href="login.html">Log-in</a><br></br>
+          <Link className= "shadowing" to="/login">Log-in</Link><br></br>
           <a href="#">Make an Appointment</a><br></br>
           <a href="#">Pay Your Bill</a><br></br>
           <a href="#">Medical Records</a>
