@@ -2,9 +2,9 @@
       background-color:rgb(192, 235, 255);
       min-height: 100vh;
       display: flex;
-      flex-direction: column; /* Adjust as needed */
-      justify-content: center; /* Centers content vertically */
-      align-items: center; /* Centers content horizontally */
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
     }
   .login-header{
     margin-top: 15%;
