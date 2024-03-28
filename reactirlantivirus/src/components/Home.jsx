@@ -16,7 +16,7 @@ const Home = () => {
         <div className= "header">
         <div className="left-section">
           <img className="symbol" src={caduceus}/>
-          <span className="website-name">IRL Anti-Virus</span>
+            <a href="/"><span className="website-name">IRL Anti-Virus</span></a>
         </div>
         <div className = "right-section">
           <Link className= "shadowing" to="/login">Log-in</Link><span className= "stick-shadow"> |</span>
@@ -26,16 +26,16 @@ const Home = () => {
       
       <div className="bar-pages">
         <div className="treatment-section">
-          <a className = "bottom-links" href="#">Patient Care & Treatment</a> 
+          <Link className = "shadowing" to="/patient-care-and-treatment">Patient Care & Treatment</Link>
         </div>
         <div className="visitor-section">
-          <a className ="bottom-links"href="#">Patient & Visitor Info</a>
+          <Link className = "shadowing" to="/patient-and-visitor-info">Patient & Visitor Info</Link>
         </div>
         <div className="appointment-section">
           <a className= "bottom-links" href="#">Book an Appointment</a>
         </div>
         <div className="about-us-section">
-          <a className="bottom-links" href="#">About Us</a>
+          <Link className = "shadowing" to="/about-us">About Us</Link>
         </div>
       </div>
       
