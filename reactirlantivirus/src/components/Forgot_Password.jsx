@@ -23,7 +23,7 @@ const Forgot_Password = () => {
         </div>
         <button className="reset-button">Reset Password</button>
         <p className="cancel-link">
-            <Link className= "shadowing" to="/login">Cancel</Link>
+          <Link className= "shadowing" to="/login">Cancel</Link>
         </p>
       </div>
     </form>
