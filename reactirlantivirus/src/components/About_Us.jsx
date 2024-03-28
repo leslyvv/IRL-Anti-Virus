@@ -26,7 +26,7 @@ const About_Us = () => {
           <Link className = "shadowing" to="/patient-care-and-treatment">Patient Care & Treatment</Link>
         </div>
         <div className="visitor-section">
-          <a className ="bottom-links"href="#">Patient & Visitor Info</a>
+          <Link className = "shadowing" to="/patient-and-visitor-info">Patient & Visitor Info</Link>
         </div>
         <div className="appointment-section">
           <a className= "bottom-links" href="#">Book an Appointment</a>
