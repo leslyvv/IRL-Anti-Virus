@@ -8,6 +8,9 @@ const Forgot_Password_Success = () => {
       <p className = "pass-reset-info">
       We have sent you an e-mail. Please contact us if you do not receive it in a few minutes.
       </p>
+      <p className="cancel-link">
+          <a href="/">Return to Home</a>
+      </p>
     </div>
   )
 }
