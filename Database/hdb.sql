@@ -101,7 +101,6 @@ CREATE TABLE doctor(
 	doctor_id INT NOT NULL AUTO_INCREMENT,
     specialization VARCHAR(30),
     PRIMARY KEY (doctor_id),
-    UNIQUE(user_id),
     FOREIGN KEY (user_id) REFERENCES person(user_id),
     FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
 );
