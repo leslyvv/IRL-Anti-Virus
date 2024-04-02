@@ -410,7 +410,7 @@ CREATE TABLE appointment(
     room_number INT,
     start_time TIME,
     end_time TIME,
-    appointment_fee DECIMAL(10,2),
+    appointment_fee DECIMAL(10,2) DEFAULT 25.00,
     PRIMARY KEY (appointment_id),
     FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
     FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id),
