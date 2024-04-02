@@ -59,7 +59,7 @@ CREATE TABLE patient(
     isVIP BOOLEAN,
     medical_history VARCHAR(255),
     PRIMARY KEY (patient_id),
-    FOREIGN KEY (user_id) REFERENCES person(user_id),
+    FOREIGN KEY (user_id) REFERENCES person(user_id) ON DELETE CASCADE,
     FOREIGN KEY (insurance_id) REFERENCES insurance(insurance_id),
     CONSTRAINT unique_user_id UNIQUE (user_id)
 );
@@ -91,7 +91,7 @@ CREATE TABLE receptionist (
     receptionist_id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (receptionist_id),
     UNIQUE(user_id),
-    FOREIGN KEY (user_id) REFERENCES person(user_id),
+    FOREIGN KEY (user_id) REFERENCES person(user_id) ON DELETE CASCADE,
     FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
 );
 
@@ -101,7 +101,7 @@ CREATE TABLE doctor(
 	doctor_id INT NOT NULL AUTO_INCREMENT,
     specialization VARCHAR(30),
     PRIMARY KEY (doctor_id),
-    FOREIGN KEY (user_id) REFERENCES person(user_id),
+    FOREIGN KEY (user_id) REFERENCES person(user_id) ON DELETE CASCADE,
     FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
 );
 
