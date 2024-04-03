@@ -408,8 +408,8 @@ CREATE TABLE appointment(
     doctor_id INT NOT NULL,
     hospital_id INT,
     room_number INT,
-    start_time TIME,
-    end_time TIME,
+    start_time DATETIME,
+    end_time DATETIME,
     appointment_fee DECIMAL(10,2) DEFAULT 25.00,
     PRIMARY KEY (appointment_id),
     FOREIGN KEY (patient_id) REFERENCES patient(patient_id),
@@ -418,13 +418,13 @@ CREATE TABLE appointment(
     FOREIGN KEY (room_number) REFERENCES room(room_number)
 );
 INSERT INTO appointment(appointment_id, patient_id, doctor_id, hospital_id, room_number, start_time, end_time, appointment_fee) VALUES
-(1, 1, 100, 1000, 101, '09:30:00', '10:00:00', 50.00),
-(2, 2,100, 1000, 104, '11:00:00', '11:45:00', 50.00),
-(3, 3,100, 1000, 203, '12:00:00', '12:30:00', 50.00),
-(4, 4, 104, 1002, 214, '12:30:00', '13:00:00', 50.00),
-(5, 5, 105, 1002, 171, '12:30:00', '13:00:00', 50.00),
-(6, 6, 101, 1001, 222, '10:15:00', '10:45:00', 50.00);  
-
+(1, 1, 100, 1000, 101, '2024-04-04 09:30:00', '2024-04-04 10:00:00', 25.00),
+(2, 2, 100, 1000, 104, '2024-04-04 11:00:00', '2024-04-04 11:45:00', 25.00),
+(3, 3, 100, 1000, 203, '2024-04-04 12:00:00', '2024-04-04 12:30:00', 25.00),
+(4, 4, 104, 1002, 214, '2024-04-04 12:30:00', '2024-04-04 13:00:00', 25.00),
+(5, 5, 105, 1002, 171, '2024-04-04 12:30:00', '2024-04-04 13:00:00', 25.00),
+(6, 6, 101, 1001, 222, '2024-04-04 10:15:00', '2024-04-04 10:45:00', 25.00);
+ 
 CREATE TABLE doctor_disease (
     doctor_id INT NOT NULL,
     disease_id INT NOT NULL,
